@@ -20,6 +20,7 @@
 	$uf = $_POST['uf'];
 	$situacaoficha = $_POST['situacaoficha'];
 
+
 	//Anaminésia
 	$doencabase = $_POST['doencabase'];
 	$alergia = $_POST['alergia'];

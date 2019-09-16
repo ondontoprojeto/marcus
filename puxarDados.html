@@ -1,0 +1,16 @@
+	 Gambiarra para pegar dados do banco e colocar na tabela
+						 <?php 
+				  			include 'conexao.php';
+
+				  			$sql = "Select * from consultas";
+				  			$buscar = mysqli_fetch_array($con,$sql);
+
+				  			while ($buscar){
+
+				  		?>	
+
+							<tr>
+				      			<td><?php echo $buscar['first']; ?></td>
+				  			</tr>
+
+				  		<?php } ?>

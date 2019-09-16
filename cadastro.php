@@ -5,13 +5,12 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="https://kit.fontawesome.com/7b04e73c30.js"></script>
 		<link rel="stylesheet" type="text/css" href="styleHeader.css">
 	</head>
 	<body>
 		<?php include 'header.php'?>
 
-		<h1 class = "text-center mb-4">Tabela Cadastro de Pessoa</h1>
+		<h1 class = "text-center mb-4">Cadastro de Pacientes</h1>
 
 			<!--Botão que ativa o Modal-->
 		<span class = "d-flex d-inline-flex mb-2">
@@ -209,7 +208,9 @@
 						$busca = mysqli_query($con, $sql);
 
 						while($array = mysqli_fetch_array($busca)){
-						
+
+
+							$idPessoa = $array['id_pessoa'];
 							$cpf = $array['cpf'];
                             $rg = $array['rg'];
                             $nome = $array['nome'];
@@ -255,7 +256,10 @@
 							<td><?php echo $datadeNascimento?></td>
 							<td><?php echo $inicio_tratamento?></td>
 
-							<td><a class="btn btn-success btn-sm"  style="color:#fff" href="editarCadastro.php?cpf=<?php echo $cpf ?>" role="button"><i class="far fa-edit"></i></a></td>
+							<td>
+								<a class="btn btn-warning btn-sm"  style="color:#fff" href="editarCadastro.php?id=<?php echo $idPessoa ?>" role="button"><i class="far fa-edit"></i></a> 
+								<a class="btn btn-danger btn-sm"  style="color:#fff" href="deletarCadastro.php?id=<?php echo $idPessoa ?>" role="button"><i class="far fa-trash-alt"></i></a>
+							</td>
          </tr>
 							
 						</tr>

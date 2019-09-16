@@ -1,5 +1,5 @@
 
-	<header id = "header" class="bg-light border border-dark pb-2 mb-4">
+	<header class="bg-white border border-dark pb-2 mb-4">
 		<div id="menu"class="d-flex justify-content-between">
 			<div class="d-inline-flex bd-highlight">
 				<div>
@@ -70,14 +70,14 @@
 				</ul>
 
 				<ul class="d-flex flex-column nav-item">
-					<a href=""><div class="d-flex justify-content-center"> <i id = "relatorio" class="fa fa-list-ul fa-3x" aria-hidden="true"></i></div>
+					<a href="relatorio.php ?>"><div class="d-flex justify-content-center"> <i id = "relatorio" class="fa fa-list-ul fa-3x" aria-hidden="true"></i></div>
 					<div class="d-flex justify-content-center text-dark">
 						<b>Relatório</b>
 					</div></a>
 				</ul>
 
 				<ul class="d-flex flex-column nav-item">
-					<a href=""><div class="d-flex justify-content-center"> <i id = "adm" class="fa fa-gears fa-3x" aria-hidden="true"></i></div>
+					<a href="adm.php"><div class="d-flex justify-content-center"> <i id = "adm" class="fa fa-gears fa-3x" aria-hidden="true"></i></div>
 					<div class="d-flex justify-content-center text-dark">
 						<b>Administração</b>
 					</div></a>
