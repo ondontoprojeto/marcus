@@ -200,30 +200,37 @@
 				    	<tr>
 				      		<td>Leandro Cerqueira</td>
 				      		<td>N Anos</td>
+				      		<td>Contato</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Matheus Ribeiro</td>
 				    		<td>N Anos</td>
+				    		<td>Contato</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Marcus Vinicius</td>
 				    		<td>N Anos</td>
+				    		<td>Contato</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Paulo Victor</td>
 				    		<td>N Anos</td>
+				    		<td>Contato</td>
 				    	</tr>
 				    	<tr>
 				      		<td>XXX.XXX</td>
 				    		<td>N Anos</td>
+				    		<td>Contato</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Leandro Cerqueira</td>
 				      		<td>N Anos</td>
+				      		<td>Contato</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Marcus Vinicius</td>
 				    		<td>N Anos</td>
+				    		<td>Contato</td>
 				    	</tr>
 				 	</tbody>
 				</table>

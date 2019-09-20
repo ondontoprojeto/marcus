@@ -44,6 +44,14 @@
 									<label for="quanti">Quantidade:</label>
 									<input type="text" class="form-control" id="quanti" placeholder="" name = "quantidade">
 								</div>
+                               <div class="form-group">
+									<label for="quanti">Quantidade Miníma:</label>
+									<input type="text" class="form-control" id="quanti" placeholder="" name = "quantidade">
+								</div>
+                               <div class="form-group">
+									<label for="quanti">Quantidade Máxima:</label>
+									<input type="text" class="form-control" id="quanti" placeholder="" name = "quantidade">
+								</div>
                                 <div class="form-group">
 									<label for="fornecedor">Fornecedor:</label>
 									<input type="text" class="form-control" id="fornecedor" placeholder="" name = "fornecedor">

@@ -49,14 +49,14 @@
 				</ul>
 
 				<ul class="d-flex flex-column nav-item">
-					<a href=""><div class="d-flex justify-content-center"><i id = "agenda"class="fa fa-calendar-check-o fa-3x" aria-hidden="true"></i></div>
+					<a href="calendario.php"><div class="d-flex justify-content-center"><i id = "agenda"class="fa fa-calendar-check-o fa-3x" aria-hidden="true"></i></div>
 					<div class="d-flex justify-content-center text-dark">
 						<b>Agenda</b>
 					</div></a>
 				</ul>
 
 				<ul class="d-flex flex-column nav-item">
-					<a href=""><div class="d-flex justify-content-center"> <i id = "ficha"class="fa fa-file-text-o fa-3x" aria-hidden="true"></i></div>
+					<a href="ficha.php"><div class="d-flex justify-content-center"> <i id = "ficha"class="fa fa-file-text-o fa-3x" aria-hidden="true"></i></div>
 					<div class="d-flex justify-content-center text-dark">
 						<b>Ficha</b>
 					</div></a>
