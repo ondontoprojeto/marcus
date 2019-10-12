@@ -32,6 +32,9 @@
             <div class = "row justify-content-center">
                 <button id = "buttonEdicao" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal1">Editar Dados do Paciente</button>
             </div>
+            <div class = "text-center">
+                <a href="cadastro.php" style = "font-size:20px;">Voltar</a>
+            </div>
         </div>
 
         <!--Modal  Tela de Cadastro-->
@@ -47,7 +50,7 @@
 
                     <div class="modal-body">
                         <h5>Dados do Paciente:</h5>
-                        <form class = "form-group mt-2" action="atualizaCadastro.php" method="_GET">
+                        <form class = "form-group mt-2" action="atualizaCadastro.php" method="post">
 
                             <?php
                                 $sql = "SELECT * FROM pessoa WHERE id_pessoa = '$id'";
@@ -57,31 +60,29 @@
                                 while ($array = mysqli_fetch_array($buscar)){
 
 
-
-                                    $idPessoa =  $array['id_pessoa'];
-                                    $cpf = $array['cpf'];
-                                    $rg = $array['rg'];
-                                    $nome = $array['nome'];
-                                    $orcamento = $array['orcamento'];
-                                    $telefone = $array['telefone'];
-                                    $celular = $array['celular'];
-                                    $email = $array['email'];
-                                    $cep = $array['cep'];
-                                    $endereco = $array['endereco'];
-                                    $complemento = $array['complemento'];
-                                    $bairro = $array['bairro'];
-                                    $nascimento = $array['nascimento'];
-                                    $inicio_tratamento = $array['inicio_tratamento'];
-                                    $cidade = $array['cidade'];
-                                    $uf= $array['uf'];
-                                    $situacaoficha = $array['situacaoficha'];
-                                    $doencabase = $array['doencabase'];
-                                    $alergia = $array['alergia'];
-                                    $medicamentos = $array['medicamentos'];
-                                    $cirurgia = $array['cirurgia'];
-                                    $internacoes = $array['internacoes'];
-                                    $pa = $array['pa'];
-                                    $queixaprinc = $array['queixaprinc'];
+                                $idPessoa = $array['id_pessoa'];
+                                $cpf = $array['cpf'];
+                                $rg = $array['rg'];
+                                $nome = $array['nome'];
+                                $orcamento = $array['orcamento'];
+                                $telefone = $array['telefone'];
+                                $celular = $array['celular'];
+                                $email = $array['email'];
+                                $cep = $array['cep'];
+                                $endereco = $array['endereco'];
+                                $complemento = $array['complemento'];
+                                $bairro = $array['bairro'];
+                                $nascimento = $array['nascimento'];
+                                $cidade = $array['cidade'];
+                                $uf= $array['uf'];
+                                $situacaoficha = $array['situacaoficha'];
+                                $doencabase = $array['doencabase'];
+                                $alergia = $array['alergia'];
+                                $medicamentos = $array['medicamentos'];
+                                $cirurgia = $array['cirurgia'];
+                                $internacoes = $array['internacoes'];
+                                $pa = $array['pa'];
+                                $queixaprinc = $array['queixaprinc'];    
                             ?>
 
 

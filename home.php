@@ -58,11 +58,11 @@
 							</div>
 						</div>
 
-						<div class = "col-md-7 ml-2">
+						<div class = "col-md-7 ml-2 w-50">
 							<span  class = "d-inline-flex">
 								<i class="fa fa-calendar mr-2" aria-hidden="true"></i>
 							</span>
-							<span class = "d-inline-flex">
+							<span class = "d-inline-flex w-50">
 								<input class = "form-control" type="date" name="data" style = "width: 85%">
 							</span>
 							<p class="text-center mt-2">
@@ -175,10 +175,10 @@
 				 	</tbody>
 				</table>
 				<span>
-					<input class = "text-center" type = "text" placeholder = "N Pacientes" disabled>
+					<input class = "text-center" type = "text" value = "N Pacientes" disabled>
 				</span>
 				<span>
-					<input class = "btn btn-primary float-right" type = "submit" value = "Visualizar Agenda">
+					<a href= "#"><input class = "btn btn-primary float-right" type = "submit" value = "Visualizar Agenda"></a>
 				</span>
 			</div>
 			<div class = "col"></div>
@@ -196,41 +196,49 @@
 							<th  class = "text-center" colspan="2"><i class="fa fa-birthday-cake mr-2" aria-hidden="true"></i>Aniversariantes do Mês</th>
 						</tr>
 					</thead>
+
+					<thead id = "theadProce2">
+				    	<tr>
+				      		<th class = "text-center">Nome</th>
+				     	 	<th class = "text-center">Dia</th>
+				    		<th>Contato</th>
+				  		</tr>
+				  	</thead>
+
 				  	<tbody id = "tbodyAni">
 				    	<tr>
 				      		<td>Leandro Cerqueira</td>
-				      		<td>N Anos</td>
-				      		<td>Contato</td>
+				      		<td>16-10</td>
+				      		<td>21 98365-6429</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Matheus Ribeiro</td>
-				    		<td>N Anos</td>
-				    		<td>Contato</td>
+				    		<td>15-08</td>
+				    		<td>21 98365-6429</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Marcus Vinicius</td>
-				    		<td>N Anos</td>
-				    		<td>Contato</td>
+				    		<td>22-09</td>
+				    		<td>21 98365-6429</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Paulo Victor</td>
-				    		<td>N Anos</td>
-				    		<td>Contato</td>
+				    		<td>01-02</td>
+				    		<td>21 98365-6429</td>
 				    	</tr>
 				    	<tr>
 				      		<td>XXX.XXX</td>
-				    		<td>N Anos</td>
-				    		<td>Contato</td>
+				    		<td>02-08</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Leandro Cerqueira</td>
-				      		<td>N Anos</td>
-				      		<td>Contato</td>
+				      		<td>05-10</td>
+				      		<td>21 98365-6429</td>
 				    	</tr>
 				    	<tr>
 				      		<td>Marcus Vinicius</td>
-				    		<td>N Anos</td>
-				    		<td>Contato</td>
+				    		<td>06-09</td>
+				    		<td>21 98365-6429</td>
 				    	</tr>
 				 	</tbody>
 				</table>

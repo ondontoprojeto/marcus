@@ -17,7 +17,7 @@
     <!-- Módulos -->
    <div class = "row">
       <div class = "col-md-12">
-        <h4>Módulo</h4>
+        <h4 class = "col-md-12 ml-1 mr-1" style = "max-width:550px">Módulo:</h4>
         <form class = "form-inline justify-content-around">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -42,9 +42,9 @@
       </div>
     </div> 
   <!-- Contexto -->
-    <div class = "row">
-      <div class = "col-md-12">
-        <h6>Contexto</h6>
+    <div class = "row, col-md-5" style="max-height: 550px">
+      <div>
+        <h6>Contexto:</h6>
         <form class = "form-inline justify-content-around">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -97,8 +97,8 @@
   <!-- Ações -->
 
     <div class = "row">
-      <div class = "col-md-12">
-        <h6>Ações</h6>
+      <div class = "col-md-4" style="max-height: 550px">
+        <h6 class = "col-md-12">Ações:</h6>
          <form class = "form-inline justify-content-around">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -126,17 +126,14 @@
 
 
 
-    <container><h6>Período</h6>
+    <div class="col-md-5"><h6>Período:</h6>
     <div class="form-group">
         <label for="De">De</label>
         <input type="date" class="form-control w-25" id="De" placeholder="" name = "De">
-    </div>	
-
-    <div class="form-group">
         <label for="Até">Até</label>
         <input type="date" class="form-control w-25" id="Até" placeholder="" name = "Até">
     </div>	
-    </container>
+    </div>
 
     <table class="table">
       <thead class="thead-dark">

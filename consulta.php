@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Odonto - Estoque</title>
+		<title>Consultas</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,53 +18,70 @@
 		
 		<?php include 'header.php'?>
 
-        <h1 class = "text-center mb-4">Cadastro de Estoque</h1>
+        <h1 class = "text-center mb-4">Consultas Realizadas</h1>
 		
 		
 		<div class = "pl-5 pr-5">
-            <button type="button" class="btn btn-primary btn-md ml-1" data-toggle="modal" data-target="#modal1">Cadastrar Produto</button>
+            <button type="button" class="btn btn-primary btn-md ml-1" data-toggle="modal" data-target="#modal1">Cadastro de Consultas</button>
             <input type="button" class ="btn btn-dark ml-5" onclick="window.print();" value="Imprimir">
             <!--Modal-->
                 <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h3 class="modal-title text-primary" id="modalTitle">Cadastro de Produtos</h3>
+                                <h3 class="modal-title text-primary" id="modalTitle">Cadastro de Consultas</h3>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <h5 class="front-left">Descrição do Material</h5>
-                                <form class = "form-group mt-2" action="cadastrarEstoque.php" method="post">
+                                <h5 class="front-left">Dados da Consulta</h5>
+                                <form class = "form-group mt-2" action="admcadatendimento.php" method="post">
                                     <div class="form-group">
-                                        <label for="nroProduto">N° do Produto:</label>
-                                        <input type="number" class="form-control" id="nroProduto" placeholder="" name = "nroproduto">
+                                        <label for="id_atendimento">ID Atendimento</label>
+                                        <input type="number" class="form-control" id="id_atendimento" placeholder="" name = "id_atendimento">
                                     </div>
+                                    
+                                            <!-- AQUI É A LISTA DE SELEÇÃO DA consultas-->
+                <div class="form-group">
+                <label>Nome da Consulta</label>
+                <select class="form-control" name="tipoconsulta">
+                    
+                    <?php
+                    
+                    include 'conexao.php';
+                    $sql = "SELECT * FROM tipoconsulta order by nomeconsulta ASC";
+                    $buscar = mysqli_query($conexao,$sql);
+                
+                    while ($array = mysqli_fetch_array($buscar)){
+                    
+                    $id_tipoconsulta = $array['id_tipoconsu'];
+                    $nomeconsulta = $array['nomeconsu'];
+                    
+                    ?>
+                    
+                    <option><?php echo $nomeconsulta ?></option>
+                    
+                <?php } ?>                       
+                                        
+                    
+                </select>
+            </div>
+
+                                   
                                     <div class="form-group">
-                                        <label for="nome">Nome do Produto:</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="" name = "nomeproduto">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="categoria">Categoria:</label>
-                                        <input type="text" class="form-control" id="categoria" placeholder="" name = "categoria">
+                                        <label for="id_paciente">ID Paciente</label>
+                                        <input type="text" class="form-control" id="id_paciente" placeholder="" name = "id_paciente">
                                     </div>
                                 <div class="form-group">
-                                        <label for="quanti">Quantidade:</label>
-                                        <input type="text" class="form-control" id="quanti" placeholder="" name = "quantidade">
+                                        <label for="descricao">Descrição</label>
+                                        <input type="text" class="form-control" id="descricao" placeholder="" name = "descricao">
                                     </div>
                                     <div class="form-group">
-                                        <label for="fornecedor">Fornecedor:</label>
-                                        <input type="text" class="form-control" id="fornecedor" placeholder="" name = "fornecedor">
+                                        <label for="dentista">Dentista</label>
+                                        <input type="text" class="form-control" id="dentista" placeholder="" name = "dentista">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="venci">Vencimento:</label>
-                                        <input type="date" class="form-control" id="venci" placeholder="" name = "vencimento">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="obser">Observações:</label>
-                                        <input type="text" class="form-control" id="obser" placeholder="" name = "complemento">
-                                    </div>
+
                                     <input type="submit" class="btn btn-primary float-right" value = "Cadastrar">
                                 </form>
                             </div>
@@ -77,13 +94,11 @@
                     <table class="table w-100 mt-4">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Código</th>
-                                <th scope="col">Nome </th>
-                                <th scope="col">Categoria</th>
-                                <th scope="col">Quantidade</th>
-                                <th scope="col">Fornecedor</th>
-                                <th scope ="col">Vencimento</th>
-                                <th scope = "col">Observações</th>
+                                
+                                <th scope="col">Nome Consulta</th>
+                                <th scope="col">data</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Dentista</th>                                
                                 <th scope = "col"></th>
                             </tr>
                         </thead>
@@ -92,38 +107,32 @@
 
                                 include_once 'conexao.php';
 
-                                $sql = "SELECT * FROM estoque";
+                                $sql = "SELECT * FROM atendimento";
 
                                 $busca = mysqli_query($con, $sql);
 
                                 while($array = mysqli_fetch_array($busca)){
 
 
-                                    $idEstoque = $array['id_estoque'];
-                                    $nroProduto = $array['numeroproduto'];
-                                    $nomeProduto = $array['nomeproduto'];
-                                    $categoria = $array['categoria'];
-                                    $quantidade = $array['quantidade'];
-                                    $fornecedor = $array['fornecedor'];
-                                    $vencimento = $array['vencimento'];
-                                    $complemento = $array['complemento'];
+                                    
+                                    $nome = $array['nome'];
+                                    $data = $array['data'];
+                                    $descricao = $array['descricao'];
+                                    $dentista = $array['dentista'];                             
+                               
 
+                                ?>
 
-                                    //Ajuste da formatação da data DD/MM/AAAA
-                                    $dtVenci = explode('-', $vencimento);
-                                    $dtVencimento = $dtVenci[2] . "-" . $dtVenci[1]. "-" . $dtVenci[0];
-
-
-                            ?>
                                 <tr>
-                                    <td><?php echo $nroProduto?></td>
-                                    <td><?php echo $nomeProduto?></td>
-                                    <td><?php echo $categoria?></td>
-                                    <td><?php echo $quantidade?></td>
-                                    <td><?php echo $fornecedor?></td>
-                                    <td><?php echo $dtVencimento?></td>
-                                    <td><?php echo $complemento?></td>
+                                    
+                                    <td><?php echo $nome?></td>
+                                    <td><?php echo $data?></td>
+                                    <td><?php echo $descricao?></td>
+                                    <td><?php echo $dentista?></td>
                                     <td>
+
+                                        <a class="btn btn-secondary btn-sm"  style="color:#fff" href="#" onclick = "excluir(<?php echo $array['id_pessoa']?>)" role="button"><i  aria-hidden="true">PROCEDIMENTOS</i></a>           
+
                                         <a class="btn btn-warning btn-sm"  style="color:#fff" href="editarEstoque.php?id=<?php echo $idEstoque?>" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 
                                         <a class="btn btn-danger btn-sm"  style="color:#fff" href="#" onclick="excluir(<?php echo $array['id_estoque']; ?>)" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>

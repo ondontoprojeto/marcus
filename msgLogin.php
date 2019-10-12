@@ -9,10 +9,10 @@
     <title>Odontológico</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header.php';?>
     <div class="container">
         <?php $msg = $_GET["msg"];
-             if($msg == "Cadastrado com sucesso"){  ?>
+             if($msg == "Gravado com sucesso"){?>
                 <div class="alert alert-success" role="alert">
                     <?php echo $msg;?>
                 </div>
@@ -21,7 +21,7 @@
                     <?php echo $msg;?>
                 </div>
         <?php };?>
-        <a href="cadastro.php">Voltar</a>
+        <a href="adm.php">Voltar</a>
     </div>
 </body>
 </html>

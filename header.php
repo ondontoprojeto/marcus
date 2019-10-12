@@ -20,8 +20,9 @@
 
 			<div class="d-inline-flex bd-highlight mt-3 mr-2">
 				<div>
-					<p>XXXXXXXXXXXXXX,</p>
-					<p>Developer</p>
+					<h5>Seja Bem-vindo (a),</h5>
+					<h5>xxxx</h5>
+
 					<a href="login.php"><button type="button" class="btn btn-dark float-right">Sair</button></a>
 				</div>
 			</div>
@@ -49,7 +50,7 @@
 				</ul>
 
 				<ul class="d-flex flex-column nav-item">
-					<a href="calendario.php"><div class="d-flex justify-content-center"><i id = "agenda"class="fa fa-calendar-check-o fa-3x" aria-hidden="true"></i></div>
+					<a href="agenda.php"><div class="d-flex justify-content-center"><i id = "agenda"class="fa fa-calendar-check-o fa-3x" aria-hidden="true"></i></div>
 					<div class="d-flex justify-content-center text-dark">
 						<b>Agenda</b>
 					</div></a>
@@ -70,7 +71,7 @@
 				</ul>
 
 				<ul class="d-flex flex-column nav-item">
-					<a href="relatorio.php ?>"><div class="d-flex justify-content-center"> <i id = "relatorio" class="fa fa-list-ul fa-3x" aria-hidden="true"></i></div>
+					<a href="relatorio.php"><div class="d-flex justify-content-center"> <i id = "relatorio" class="fa fa-list-ul fa-3x" aria-hidden="true"></i></div>
 					<div class="d-flex justify-content-center text-dark">
 						<b>Relatório</b>
 					</div></a>
