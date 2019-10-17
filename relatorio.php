@@ -10,7 +10,7 @@
   </head>
   <body>		
     			<?php include 'header.php'?>
-    <div class = "d-flex justify-content-end mr-2">
+    <div class = "d-flex center-content-end mr-2">
       <h5 class = "ml-4">*Marque as opções, depois clique em gerar relatório</h5>
     </div>
 
@@ -159,6 +159,9 @@
                 <input type="date" class="form-control w-100" id="Até" placeholder="" name = "Até">
             </div>
        </div>
+       <div>
+       <button type="button" class="btn btn-dark">Imprimir</button>
+</div>
    </div>
    
    
