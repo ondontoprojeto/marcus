@@ -42,7 +42,7 @@
       </div>
     </div> 
   <!-- Contexto -->
-    <div class = "row, col-md-5" style="max-height: 550px">
+    <div class = "row, col-md-5 float-left" style="max-height: 550px">
       <div>
         <h6>Contexto:</h6>
         <form class = "form-inline justify-content-around">
@@ -96,7 +96,7 @@
 
   <!-- Ações -->
 
-    <div class = "row">
+    <div class = "row, float-left">
       <div class = "col-md-4" style="max-height: 550px">
         <h6 class = "col-md-12">Ações:</h6>
          <form class = "form-inline justify-content-around">
@@ -119,14 +119,14 @@
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">Cancelada</label>
           </div>
-        </form>
+        </form>       
       </div>
     </div>
 
 
 
 
-    <div class="col-md-5"><h6>Período:</h6>
+    <div class="col-md-5, float-left"><h6>Período:</h6>
     <div class="form-group">
         <label for="De">De</label>
         <input type="date" class="form-control w-25" id="De" placeholder="" name = "De">
