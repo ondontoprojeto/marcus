@@ -147,23 +147,21 @@
 
    <h4 class="mt-4">Período</h4>
    <div class="row">
-       <div class="col-3">
+       <div class="col-4">
            <div class="form-group">
                 <label for="De">De</label>
                 <input type="date" class="form-control w-100" id="De" placeholder="" name = "De">
             </div>	
        </div>
-       <div class="col-3">
+       <div class="col-4">
             <div class="form-group">
                 <label for="Até">Até</label>
                 <input type="date" class="form-control w-100" id="Até" placeholder="" name = "Até">
             </div>
+            
        </div>
-       <div>
-       <button type="button" class="btn btn-dark">Imprimir</button>
-</div>
+       <div class="col-4"><button type="button" class="btn btn-dark">Imprimir</button></div>
    </div>
-   
    
     <table class="table table-hover">
       <thead class="thead-dark">
